@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LatestNews renders correctly 1`] = `
+<div
+  className="fd-card fd-most-popular"
+>
+  <div
+    className="tab-header"
+  >
+    <h3
+      className="tab-most-read active"
+      onClick={[Function]}
+    >
+      Meest gelezen
+    </h3>
+    <h3
+      className="tab-most-comments"
+      onClick={[Function]}
+    >
+      Meeste reacties
+    </h3>
+  </div>
+  <ol
+    className="tab-most-read-content active"
+  >
+    <li>
+      <a
+        className=" undefined"
+        href="https://fd.nl"
+      >
+        title van nieuwsbericht
+      </a>
+    </li>
+  </ol>
+  <ol
+    className="tab-most-comments-content"
+  >
+    <li>
+      <a
+        className="longread undefined"
+        href="https://fd.nl"
+      >
+        title van nieuwsbericht 2
+      </a>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`LatestNews renders is-read correctly 1`] = `
+<div
+  className="fd-card fd-most-popular"
+>
+  <div
+    className="tab-header"
+  >
+    <h3
+      className="tab-most-read active"
+      onClick={[Function]}
+    >
+      Meest gelezen
+    </h3>
+    <h3
+      className="tab-most-comments"
+      onClick={[Function]}
+    >
+      Meeste reacties
+    </h3>
+  </div>
+  <ol
+    className="tab-most-read-content active"
+  >
+    <li>
+      <a
+        className=" is-read"
+        href="https://fd.nl"
+      >
+        title van nieuwsbericht
+      </a>
+    </li>
+  </ol>
+  <ol
+    className="tab-most-comments-content"
+  >
+    <li>
+      <a
+        className="longread undefined"
+        href="https://fd.nl"
+      >
+        title van nieuwsbericht 2
+      </a>
+    </li>
+  </ol>
+</div>
+`;
