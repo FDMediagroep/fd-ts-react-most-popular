@@ -25,6 +25,53 @@ exports[`MostPopular renders correctly 1`] = `
   >
     <li>
       <a
+        className="longread undefined"
+        href="https://fd.nl"
+      >
+        title van nieuwsbericht
+      </a>
+    </li>
+  </ol>
+  <ol
+    className="tab-most-comments-content"
+  >
+    <li>
+      <a
+        className=" undefined"
+        href="https://fd.nl"
+      >
+        title van nieuwsbericht 2
+      </a>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`MostPopular renders correctly 2`] = `
+<div
+  className="fd-card fd-most-popular"
+>
+  <div
+    className="tab-header"
+  >
+    <h3
+      className="tab-most-read active"
+      onClick={[Function]}
+    >
+      Meest gelezen tab
+    </h3>
+    <h3
+      className="tab-most-comments"
+      onClick={[Function]}
+    >
+      Meeste comments label
+    </h3>
+  </div>
+  <ol
+    className="tab-most-read-content active"
+  >
+    <li>
+      <a
         className=" undefined"
         href="https://fd.nl"
       >
@@ -84,7 +131,7 @@ exports[`MostPopular renders is-read correctly 1`] = `
   >
     <li>
       <a
-        className="longread undefined"
+        className="longread is-read"
         href="https://fd.nl"
       >
         title van nieuwsbericht 2
