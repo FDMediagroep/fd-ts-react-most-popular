@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LatestNews renders correctly 1`] = `
+exports[`MostPopular renders correctly 1`] = `
 <div
   className="fd-card fd-most-popular"
 >
@@ -47,7 +47,7 @@ exports[`LatestNews renders correctly 1`] = `
 </div>
 `;
 
-exports[`LatestNews renders is-read correctly 1`] = `
+exports[`MostPopular renders is-read correctly 1`] = `
 <div
   className="fd-card fd-most-popular"
 >

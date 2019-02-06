@@ -1,7 +1,7 @@
 {
   "name": "@fdmg/fd-most-popular",
   "version": "1.0.0",
-  "description": "FD-themed latest news",
+  "description": "FD-themed Most Popular Card",
   "types": "dist/MostPopular.d.ts",
   "main": "dist/most-popular.js",
   "files": [
