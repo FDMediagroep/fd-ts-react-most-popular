@@ -21,7 +21,7 @@ exports[`MostPopular renders correctly 1`] = `
     </h3>
   </div>
   <ol
-    className="tab-most-read-content active"
+    className=" active"
   >
     <li>
       <a
@@ -33,7 +33,7 @@ exports[`MostPopular renders correctly 1`] = `
     </li>
   </ol>
   <ol
-    className="tab-most-comments-content"
+    className=""
   >
     <li>
       <a
@@ -68,7 +68,7 @@ exports[`MostPopular renders correctly 2`] = `
     </h3>
   </div>
   <ol
-    className="tab-most-read-content active"
+    className=" active"
   >
     <li>
       <a
@@ -80,7 +80,7 @@ exports[`MostPopular renders correctly 2`] = `
     </li>
   </ol>
   <ol
-    className="tab-most-comments-content"
+    className=""
   >
     <li>
       <a
@@ -115,7 +115,7 @@ exports[`MostPopular renders is-read correctly 1`] = `
     </h3>
   </div>
   <ol
-    className="tab-most-read-content active"
+    className=" active"
   >
     <li>
       <a
@@ -127,7 +127,7 @@ exports[`MostPopular renders is-read correctly 1`] = `
     </li>
   </ol>
   <ol
-    className="tab-most-comments-content"
+    className=""
   >
     <li>
       <a

@@ -1,6 +1,6 @@
 {
   "name": "@fdmg/fd-most-popular",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "FD-themed Most Popular Card",
   "types": "dist/MostPopular.d.ts",
   "main": "dist/most-popular.js",

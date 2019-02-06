@@ -39,7 +39,7 @@ export default class MostPopular extends PureComponent<Props, any> {
                         <h3 className={`tab-most-read${this.state.active === 'tab-most-read' ? ' active' : ''}`} onClick={this.handleTabClick}>{this.props.mostReadLabel ? this.props.mostReadLabel : 'Meest gelezen'}</h3>
                         <h3 className={`tab-most-comments${this.state.active === 'tab-most-comments' ? ' active' : ''}`} onClick={this.handleTabClick}>{this.props.mostCommentsLabel ? this.props.mostCommentsLabel : 'Meeste reacties'}</h3>
                     </div>
-                    <ol className={`tab-most-read-content${this.state.active === 'tab-most-read' ? ' active' : ''}`}>
+                    <ol className={this.state.active === 'tab-most-read' ? ' active' : ''}>
                         {
                             this.props.mostRead.map((newsItem: NewsItem) => (
                                 <li key={newsItem.uuid}>
@@ -48,7 +48,7 @@ export default class MostPopular extends PureComponent<Props, any> {
                             ))
                         }
                     </ol>
-                    <ol className={`tab-most-comments-content${this.state.active === 'tab-most-comments' ? ' active' : ''}`}>
+                    <ol className={this.state.active === 'tab-most-comments' ? ' active' : ''}>
                         {
                             this.props.mostComments.map((newsItem: NewsItem) => (
                                 <li key={newsItem.uuid}>
