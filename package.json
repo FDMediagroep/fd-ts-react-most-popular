@@ -1,5 +1,5 @@
 {
-  "name": "@fdmg/fd-latest-news",
+  "name": "@fdmg/fd-most-popular",
   "version": "1.0.0",
   "description": "FD-themed latest news",
   "types": "dist/MostPopular.d.ts",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:FDMediagroep/fd-ts-react-latest-news.git"
+    "url": "git@github.com:FDMediagroep/fd-ts-react-most-popular.git"
   },
   "scripts": {
     "build-demo": "npm run copy-img && npm run copy-demo-html && cross-env NODE_ENV=production webpack --mode=production --config webpack.demo.config.js",
