@@ -18,5 +18,5 @@ export default class MostPopular extends PureComponent<Props, any> {
     handleTabClick: (e: React.MouseEvent<HTMLHeadingElement, MouseEvent>) => void;
     render(): JSX.Element;
 }
-declare const GlobalStyle: import("styled-components").GlobalStyleComponent<{}, import("styled-components").DefaultTheme>;
-export { GlobalStyle as MostPopularStyle };
+export declare const MostPopularStyle: import("styled-components").GlobalStyleComponent<{}, import("styled-components").DefaultTheme>;
+export {};

@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { createGlobalStyle } from "styled-components";
-import Card from "@fdmg/fd-card";
+import Card, { CardStyle } from "@fdmg/fd-card";
 
 interface NewsItem {
     uuid: string;
@@ -65,10 +65,13 @@ export default class MostPopular extends PureComponent<Props, any> {
 
 const GlobalStyle = createGlobalStyle`
 .fd-most-popular {
+    .tab-header {
+        display: flex;
+    }
     h3 {
         margin: 0;
         font-size: 1rem;
-        font-family: ProximaNovaBold,sans-serif;
+        font-family: 'ProximaNovaBold' ,sans-serif;
         line-height: 1.1em;
         color: #677381;
         cursor: pointer;
@@ -77,7 +80,7 @@ const GlobalStyle = createGlobalStyle`
             color: #49a4a2;
             background: transparent;
         }
-        width: 50%;
+        flex: 1 1 auto;
         white-space: nowrap;
         box-sizing: border-box;
         display: inline-block;
@@ -154,4 +157,7 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
-export {GlobalStyle as MostPopularStyle};
+export const MostPopularStyle = createGlobalStyle`
+${(CardStyle as any).globalStyle.rules}
+${(GlobalStyle as any).globalStyle.rules}
+`;
