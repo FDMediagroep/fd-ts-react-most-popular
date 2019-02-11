@@ -4,11 +4,13 @@
 
 const webpack = require("webpack");
 const path = require('path');
+const NODE_ENV = JSON.stringify(process.env.NODE_ENV ? process.env.NODE_ENV : 'development');
+const devtool = NODE_ENV == '"development"' ? 'source-map' : undefined;
 
 console.info('process.env.NODE_ENV', JSON.stringify(process.env.NODE_ENV));
 
 module.exports = {
-    // devtool: "source-map",
+    devtool,
     entry: {
         "most-popular": ["./src/MostPopular.tsx"]
     },
@@ -27,9 +29,11 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx']
     },
     externals: {
+        '@fdmg/fd-card': '@fdmg/fd-card',
         'react': 'react',
         'react-dom': 'react-dom',
-        'styled-components': 'styled-components'
+        'styled-components': 'styled-components',
+        'uniqid': 'uniqid'
     },
     plugins: [
         new webpack.DefinePlugin({
