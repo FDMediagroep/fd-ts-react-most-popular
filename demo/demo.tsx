@@ -31,8 +31,7 @@ ReactDOM.render(<>
                 }, {
                     uuid: uniqid(),
                     label: 'Verschillen tussen eurolanden gaan weer opspelen ',
-                    url: 'https://fd.nl/achtergrond/1288289/verschillen-tussen-eurolanden-gaan-weer-opspelen',
-                    longread: true
+                    url: 'https://fd.nl/achtergrond/1288289/verschillen-tussen-eurolanden-gaan-weer-opspelen'
                 }, {
                     uuid: uniqid(),
                     label: 'ING boekt meer winst dan verwacht',
@@ -49,7 +48,6 @@ ReactDOM.render(<>
                 }, {
                     uuid: uniqid(),
                     label: 'Verschillen tussen eurolanden gaan weer opspelen',
-                    longread: true,
                     url: 'https://fd.nl/achtergrond/1288289/verschillen-tussen-eurolanden-gaan-weer-opspelen'
                 }, {
                     uuid: uniqid(),
