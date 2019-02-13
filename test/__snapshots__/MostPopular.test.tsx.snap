@@ -25,7 +25,7 @@ exports[`MostPopular renders correctly 1`] = `
   >
     <li>
       <a
-        className="longread undefined"
+        className="undefined"
         href="https://fd.nl"
       >
         title van nieuwsbericht
@@ -37,7 +37,7 @@ exports[`MostPopular renders correctly 1`] = `
   >
     <li>
       <a
-        className=" undefined"
+        className="undefined"
         href="https://fd.nl"
       >
         title van nieuwsbericht 2
@@ -72,7 +72,7 @@ exports[`MostPopular renders correctly 2`] = `
   >
     <li>
       <a
-        className=" undefined"
+        className="undefined"
         href="https://fd.nl"
       >
         title van nieuwsbericht
@@ -84,7 +84,7 @@ exports[`MostPopular renders correctly 2`] = `
   >
     <li>
       <a
-        className="longread undefined"
+        className="undefined"
         href="https://fd.nl"
       >
         title van nieuwsbericht 2
@@ -119,7 +119,7 @@ exports[`MostPopular renders is-read correctly 1`] = `
   >
     <li>
       <a
-        className=" is-read"
+        className="is-read"
         href="https://fd.nl"
       >
         title van nieuwsbericht
@@ -131,7 +131,7 @@ exports[`MostPopular renders is-read correctly 1`] = `
   >
     <li>
       <a
-        className="longread is-read"
+        className="is-read"
         href="https://fd.nl"
       >
         title van nieuwsbericht 2

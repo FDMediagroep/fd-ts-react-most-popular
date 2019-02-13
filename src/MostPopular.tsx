@@ -7,7 +7,6 @@ interface NewsItem {
     isRead?: boolean;
     label: string;
     url: string;
-    longread?: boolean;
     target?: string;
 }
 
@@ -43,7 +42,7 @@ export default class MostPopular extends PureComponent<Props, any> {
                         {
                             this.props.mostRead.map((newsItem: NewsItem) => (
                                 <li key={newsItem.uuid}>
-                                    <a href={newsItem.url} target={newsItem.target} className={`${newsItem.longread ? 'longread' : ''} ${newsItem.isRead ? 'is-read' : undefined}`}>{newsItem.label}</a>
+                                    <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : undefined}`}>{newsItem.label}</a>
                                 </li>
                             ))
                         }
@@ -52,7 +51,7 @@ export default class MostPopular extends PureComponent<Props, any> {
                         {
                             this.props.mostComments.map((newsItem: NewsItem) => (
                                 <li key={newsItem.uuid}>
-                                    <a href={newsItem.url} target={newsItem.target} className={`${newsItem.longread ? 'longread' : ''} ${newsItem.isRead ? 'is-read' : undefined}`}>{newsItem.label}</a>
+                                    <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : undefined}`}>{newsItem.label}</a>
                                 </li>
                             ))
                         }
@@ -137,9 +136,6 @@ const GlobalStyle = createGlobalStyle`
         color: #191919;
         &:hover {
             color: #49a4a2;
-        }
-        &.longread:hover {
-            color: #f05031;
         }
         padding: 6px;
         font-weight: normal;

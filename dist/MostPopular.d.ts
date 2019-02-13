@@ -4,7 +4,6 @@ interface NewsItem {
     isRead?: boolean;
     label: string;
     url: string;
-    longread?: boolean;
     target?: string;
 }
 export interface Props {
