@@ -2,7 +2,8 @@
 
 exports[`MostPopular renders correctly 1`] = `
 <div
-  className="fd-card fd-most-popular"
+  cardStyle="default"
+  className="fd-card fd-most-popular default"
 >
   <div
     className="tab-header"
@@ -49,7 +50,8 @@ exports[`MostPopular renders correctly 1`] = `
 
 exports[`MostPopular renders correctly 2`] = `
 <div
-  className="fd-card fd-most-popular"
+  cardStyle="article"
+  className="fd-card fd-most-popular article"
 >
   <div
     className="tab-header"
@@ -96,7 +98,8 @@ exports[`MostPopular renders correctly 2`] = `
 
 exports[`MostPopular renders is-read correctly 1`] = `
 <div
-  className="fd-card fd-most-popular"
+  cardStyle="persoonlijk"
+  className="fd-card fd-most-popular persoonlijk"
 >
   <div
     className="tab-header"

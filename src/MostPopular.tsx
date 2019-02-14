@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { createGlobalStyle } from "styled-components";
-import Card, { CardStyle } from "@fdmg/fd-card";
+import Card, { CardStyle, CardTypes } from "@fdmg/fd-card";
 
 interface NewsItem {
     uuid: string;
@@ -11,6 +11,7 @@ interface NewsItem {
 }
 
 export interface Props {
+    cardStyle: CardTypes;
     mostReadLabel?: string;
     mostRead: NewsItem[];
     mostCommentsLabel?: string;
@@ -33,7 +34,7 @@ export default class MostPopular extends PureComponent<Props, any> {
             <>
                 <GlobalStyle/>
 
-                <Card className="fd-most-popular">
+                <Card cardStyle={this.props.cardStyle} className="fd-most-popular">
                     <div className="tab-header">
                         <h3 className={`tab-most-read${this.state.active === 'tab-most-read' ? ' active' : ''}`} onClick={this.handleTabClick}>{this.props.mostReadLabel ? this.props.mostReadLabel : 'Meest gelezen'}</h3>
                         <h3 className={`tab-most-comments${this.state.active === 'tab-most-comments' ? ' active' : ''}`} onClick={this.handleTabClick}>{this.props.mostCommentsLabel ? this.props.mostCommentsLabel : 'Meeste reacties'}</h3>
@@ -84,6 +85,15 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         display: inline-block;
         padding: 12px 15px;
+    }
+
+    &.persoonlijk {
+        h3 {
+            color: #677381;
+            &.active {
+                color: #e57e30;
+            }
+        }
     }
 
     ol {
