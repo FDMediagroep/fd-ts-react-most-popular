@@ -87,15 +87,6 @@ const GlobalStyle = createGlobalStyle`
         padding: 12px 15px;
     }
 
-    &.persoonlijk {
-        h3 {
-            color: #677381;
-            &.active {
-                color: #e57e30;
-            }
-        }
-    }
-
     ol {
         margin: 0;
         padding: 0;
