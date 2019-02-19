@@ -96,7 +96,7 @@ exports[`MostPopular renders correctly 2`] = `
 </div>
 `;
 
-exports[`MostPopular renders is-read correctly 1`] = `
+exports[`MostPopular renders is-read correctly and without most comments 1`] = `
 <div
   cardStyle="persoonlijk"
   className="fd-card fd-most-popular persoonlijk"
@@ -110,12 +110,6 @@ exports[`MostPopular renders is-read correctly 1`] = `
     >
       Meest gelezen
     </h3>
-    <h3
-      className="tab-most-comments"
-      onClick={[Function]}
-    >
-      Meeste reacties
-    </h3>
   </div>
   <ol
     className=" active"
@@ -126,18 +120,6 @@ exports[`MostPopular renders is-read correctly 1`] = `
         href="https://fd.nl"
       >
         title van nieuwsbericht
-      </a>
-    </li>
-  </ol>
-  <ol
-    className=""
-  >
-    <li>
-      <a
-        className="is-read"
-        href="https://fd.nl"
-      >
-        title van nieuwsbericht 2
       </a>
     </li>
   </ol>

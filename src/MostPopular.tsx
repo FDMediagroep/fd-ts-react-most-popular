@@ -37,7 +37,7 @@ export default class MostPopular extends PureComponent<Props, any> {
                 <Card cardStyle={this.props.cardStyle} className="fd-most-popular">
                     <div className="tab-header">
                         <h3 className={`tab-most-read${this.state.active === 'tab-most-read' ? ' active' : ''}`} onClick={this.handleTabClick}>{this.props.mostReadLabel ? this.props.mostReadLabel : 'Meest gelezen'}</h3>
-                        <h3 className={`tab-most-comments${this.state.active === 'tab-most-comments' ? ' active' : ''}`} onClick={this.handleTabClick}>{this.props.mostCommentsLabel ? this.props.mostCommentsLabel : 'Meeste reacties'}</h3>
+                        {this.props.mostComments.length ? <h3 className={`tab-most-comments${this.state.active === 'tab-most-comments' ? ' active' : ''}`} onClick={this.handleTabClick}>{this.props.mostCommentsLabel ? this.props.mostCommentsLabel : 'Meeste reacties'}</h3> : null}
                     </div>
                     <ol className={this.state.active === 'tab-most-read' ? ' active' : ''}>
                         {
@@ -48,15 +48,17 @@ export default class MostPopular extends PureComponent<Props, any> {
                             ))
                         }
                     </ol>
-                    <ol className={this.state.active === 'tab-most-comments' ? ' active' : ''}>
-                        {
-                            this.props.mostComments.map((newsItem: NewsItem) => (
-                                <li key={newsItem.uuid}>
-                                    <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : ''}`}>{newsItem.label}</a>
-                                </li>
-                            ))
-                        }
-                    </ol>
+                    {this.props.mostComments.length ? (
+                        <ol className={this.state.active === 'tab-most-comments' ? ' active' : ''}>
+                            {
+                                this.props.mostComments.map((newsItem: NewsItem) => (
+                                    <li key={newsItem.uuid}>
+                                        <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : ''}`}>{newsItem.label}</a>
+                                    </li>
+                                ))
+                            }
+                        </ol>
+                    ) : null}
                 </Card>
             </>
         );
