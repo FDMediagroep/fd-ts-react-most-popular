@@ -43,7 +43,7 @@ export default class MostPopular extends PureComponent<Props, any> {
                         {
                             this.props.mostRead.map((newsItem: NewsItem) => (
                                 <li key={newsItem.uuid}>
-                                    <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : undefined}`}>{newsItem.label}</a>
+                                    <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : ''}`}>{newsItem.label}</a>
                                 </li>
                             ))
                         }
@@ -52,7 +52,7 @@ export default class MostPopular extends PureComponent<Props, any> {
                         {
                             this.props.mostComments.map((newsItem: NewsItem) => (
                                 <li key={newsItem.uuid}>
-                                    <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : undefined}`}>{newsItem.label}</a>
+                                    <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : ''}`}>{newsItem.label}</a>
                                 </li>
                             ))
                         }

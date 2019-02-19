@@ -26,7 +26,7 @@ exports[`MostPopular renders correctly 1`] = `
   >
     <li>
       <a
-        className="undefined"
+        className=""
         href="https://fd.nl"
       >
         title van nieuwsbericht
@@ -38,7 +38,7 @@ exports[`MostPopular renders correctly 1`] = `
   >
     <li>
       <a
-        className="undefined"
+        className=""
         href="https://fd.nl"
       >
         title van nieuwsbericht 2
@@ -74,7 +74,7 @@ exports[`MostPopular renders correctly 2`] = `
   >
     <li>
       <a
-        className="undefined"
+        className=""
         href="https://fd.nl"
       >
         title van nieuwsbericht
@@ -86,7 +86,7 @@ exports[`MostPopular renders correctly 2`] = `
   >
     <li>
       <a
-        className="undefined"
+        className=""
         href="https://fd.nl"
       >
         title van nieuwsbericht 2
