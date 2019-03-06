@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { createGlobalStyle } from "styled-components";
-import Card, { CardStyle } from "@fdmg/fd-card";
+import Card, { CardStyle, CardTypes } from "@fdmg/fd-card";
 
 interface NewsItem {
     uuid: string;
@@ -11,6 +11,7 @@ interface NewsItem {
 }
 
 export interface Props {
+    cardStyle: CardTypes;
     mostReadLabel?: string;
     mostRead: NewsItem[];
     mostCommentsLabel?: string;
@@ -33,29 +34,31 @@ export default class MostPopular extends PureComponent<Props, any> {
             <>
                 <GlobalStyle/>
 
-                <Card className="fd-most-popular">
+                <Card cardStyle={this.props.cardStyle} className="fd-most-popular">
                     <div className="tab-header">
                         <h3 className={`tab-most-read${this.state.active === 'tab-most-read' ? ' active' : ''}`} onClick={this.handleTabClick}>{this.props.mostReadLabel ? this.props.mostReadLabel : 'Meest gelezen'}</h3>
-                        <h3 className={`tab-most-comments${this.state.active === 'tab-most-comments' ? ' active' : ''}`} onClick={this.handleTabClick}>{this.props.mostCommentsLabel ? this.props.mostCommentsLabel : 'Meeste reacties'}</h3>
+                        {this.props.mostComments.length ? <h3 className={`tab-most-comments${this.state.active === 'tab-most-comments' ? ' active' : ''}`} onClick={this.handleTabClick}>{this.props.mostCommentsLabel ? this.props.mostCommentsLabel : 'Meeste reacties'}</h3> : null}
                     </div>
                     <ol className={this.state.active === 'tab-most-read' ? ' active' : ''}>
                         {
                             this.props.mostRead.map((newsItem: NewsItem) => (
                                 <li key={newsItem.uuid}>
-                                    <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : undefined}`}>{newsItem.label}</a>
+                                    <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : ''}`}>{newsItem.label}</a>
                                 </li>
                             ))
                         }
                     </ol>
-                    <ol className={this.state.active === 'tab-most-comments' ? ' active' : ''}>
-                        {
-                            this.props.mostComments.map((newsItem: NewsItem) => (
-                                <li key={newsItem.uuid}>
-                                    <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : undefined}`}>{newsItem.label}</a>
-                                </li>
-                            ))
-                        }
-                    </ol>
+                    {this.props.mostComments.length ? (
+                        <ol className={this.state.active === 'tab-most-comments' ? ' active' : ''}>
+                            {
+                                this.props.mostComments.map((newsItem: NewsItem) => (
+                                    <li key={newsItem.uuid}>
+                                        <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : ''}`}>{newsItem.label}</a>
+                                    </li>
+                                ))
+                            }
+                        </ol>
+                    ) : null}
                 </Card>
             </>
         );

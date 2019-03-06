@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import { CardTypes } from "@fdmg/fd-card";
 interface NewsItem {
     uuid: string;
     isRead?: boolean;
@@ -7,6 +8,7 @@ interface NewsItem {
     target?: string;
 }
 export interface Props {
+    cardStyle: CardTypes;
     mostReadLabel?: string;
     mostRead: NewsItem[];
     mostCommentsLabel?: string;

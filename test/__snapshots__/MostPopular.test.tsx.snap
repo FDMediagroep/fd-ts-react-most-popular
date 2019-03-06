@@ -2,7 +2,8 @@
 
 exports[`MostPopular renders correctly 1`] = `
 <div
-  className="fd-card fd-most-popular"
+  cardStyle="default"
+  className="fd-card fd-most-popular default"
 >
   <div
     className="tab-header"
@@ -25,7 +26,7 @@ exports[`MostPopular renders correctly 1`] = `
   >
     <li>
       <a
-        className="undefined"
+        className=""
         href="https://fd.nl"
       >
         title van nieuwsbericht
@@ -37,7 +38,7 @@ exports[`MostPopular renders correctly 1`] = `
   >
     <li>
       <a
-        className="undefined"
+        className=""
         href="https://fd.nl"
       >
         title van nieuwsbericht 2
@@ -49,7 +50,8 @@ exports[`MostPopular renders correctly 1`] = `
 
 exports[`MostPopular renders correctly 2`] = `
 <div
-  className="fd-card fd-most-popular"
+  cardStyle="article"
+  className="fd-card fd-most-popular article"
 >
   <div
     className="tab-header"
@@ -72,7 +74,7 @@ exports[`MostPopular renders correctly 2`] = `
   >
     <li>
       <a
-        className="undefined"
+        className=""
         href="https://fd.nl"
       >
         title van nieuwsbericht
@@ -84,7 +86,7 @@ exports[`MostPopular renders correctly 2`] = `
   >
     <li>
       <a
-        className="undefined"
+        className=""
         href="https://fd.nl"
       >
         title van nieuwsbericht 2
@@ -94,9 +96,10 @@ exports[`MostPopular renders correctly 2`] = `
 </div>
 `;
 
-exports[`MostPopular renders is-read correctly 1`] = `
+exports[`MostPopular renders is-read correctly and without most comments 1`] = `
 <div
-  className="fd-card fd-most-popular"
+  cardStyle="persoonlijk"
+  className="fd-card fd-most-popular persoonlijk"
 >
   <div
     className="tab-header"
@@ -106,12 +109,6 @@ exports[`MostPopular renders is-read correctly 1`] = `
       onClick={[Function]}
     >
       Meest gelezen
-    </h3>
-    <h3
-      className="tab-most-comments"
-      onClick={[Function]}
-    >
-      Meeste reacties
     </h3>
   </div>
   <ol
@@ -123,18 +120,6 @@ exports[`MostPopular renders is-read correctly 1`] = `
         href="https://fd.nl"
       >
         title van nieuwsbericht
-      </a>
-    </li>
-  </ol>
-  <ol
-    className=""
-  >
-    <li>
-      <a
-        className="is-read"
-        href="https://fd.nl"
-      >
-        title van nieuwsbericht 2
       </a>
     </li>
   </ol>
