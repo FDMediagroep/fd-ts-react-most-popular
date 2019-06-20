@@ -1,5 +1,5 @@
-import React, { PureComponent } from "react";
-import { createGlobalStyle } from "styled-components";
+import React, { useState } from "react";
+import { createGlobalStyle, css } from "styled-components";
 import Card, { CardStyle, CardTypes } from "@fdmg/fd-card";
 
 interface NewsItem {
@@ -18,54 +18,47 @@ export interface Props {
     mostComments: NewsItem[];
 }
 
-export default class MostPopular extends PureComponent<Props, any> {
-    state: any = {
-        active: 'tab-most-read'
+export default function MostPopular(props: Props) {
+    const [active, setActive] = useState('tab-most-read');
+    const handleTabClick = (e: React.MouseEvent<HTMLHeadingElement>) => {
+        setActive(e.currentTarget.classList.item(0) as any);
     };
 
-    handleTabClick = (e: React.MouseEvent<HTMLHeadingElement>) => {
-        this.setState({
-            active: e.currentTarget.classList.item(0)
-        });
-    }
+    return (
+        <>
+            <GlobalStyle/>
 
-    render() {
-        return (
-            <>
-                <GlobalStyle/>
-
-                <Card cardStyle={this.props.cardStyle} className="fd-most-popular">
-                    <div className="tab-header">
-                        <h3 className={`tab-most-read${this.state.active === 'tab-most-read' ? ' active' : ''}`} onClick={this.handleTabClick}>{this.props.mostReadLabel ? this.props.mostReadLabel : 'Meest gelezen'}</h3>
-                        {this.props.mostComments.length ? <h3 className={`tab-most-comments${this.state.active === 'tab-most-comments' ? ' active' : ''}`} onClick={this.handleTabClick}>{this.props.mostCommentsLabel ? this.props.mostCommentsLabel : 'Meeste reacties'}</h3> : null}
-                    </div>
-                    <ol className={this.state.active === 'tab-most-read' ? ' active' : ''}>
+            <Card cardStyle={props.cardStyle} className="fd-most-popular">
+                <div className="tab-header">
+                    <h3 className={`tab-most-read${active === 'tab-most-read' ? ' active' : ''}`} onClick={handleTabClick}>{props.mostReadLabel ? props.mostReadLabel : 'Meest gelezen'}</h3>
+                    {props.mostComments.length ? <h3 className={`tab-most-comments${active === 'tab-most-comments' ? ' active' : ''}`} onClick={handleTabClick}>{props.mostCommentsLabel ? props.mostCommentsLabel : 'Meeste reacties'}</h3> : null}
+                </div>
+                <ol className={active === 'tab-most-read' ? ' active' : ''}>
+                    {
+                        props.mostRead.map((newsItem: NewsItem) => (
+                            <li key={newsItem.uuid}>
+                                <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : ''}`}>{newsItem.label}</a>
+                            </li>
+                        ))
+                    }
+                </ol>
+                {props.mostComments.length ? (
+                    <ol className={active === 'tab-most-comments' ? ' active' : ''}>
                         {
-                            this.props.mostRead.map((newsItem: NewsItem) => (
+                            props.mostComments.map((newsItem: NewsItem) => (
                                 <li key={newsItem.uuid}>
                                     <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : ''}`}>{newsItem.label}</a>
                                 </li>
                             ))
                         }
                     </ol>
-                    {this.props.mostComments.length ? (
-                        <ol className={this.state.active === 'tab-most-comments' ? ' active' : ''}>
-                            {
-                                this.props.mostComments.map((newsItem: NewsItem) => (
-                                    <li key={newsItem.uuid}>
-                                        <a href={newsItem.url} target={newsItem.target} className={`${newsItem.isRead ? 'is-read' : ''}`}>{newsItem.label}</a>
-                                    </li>
-                                ))
-                            }
-                        </ol>
-                    ) : null}
-                </Card>
-            </>
-        );
-    }
+                ) : null}
+            </Card>
+        </>
+    );
 }
 
-const GlobalStyle = createGlobalStyle`
+const styles = css`
 .fd-most-popular {
     .tab-header {
         display: flex;
@@ -156,7 +149,9 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
-export const MostPopularStyle = createGlobalStyle`
-${(CardStyle as any).globalStyle.rules}
-${(GlobalStyle as any).globalStyle.rules}
+const GlobalStyle = createGlobalStyle`${styles}`;
+
+export const MostPopularStyle = css`
+${CardStyle}
+${styles}
 `;
