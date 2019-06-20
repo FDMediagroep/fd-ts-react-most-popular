@@ -149,9 +149,9 @@ const styles = css`
 }
 `;
 
-const GlobalStyle = createGlobalStyle`${styles}`;
-
 export const MostPopularStyle = css`
 ${CardStyle}
 ${styles}
 `;
+
+const GlobalStyle = createGlobalStyle`${MostPopularStyle}`;
