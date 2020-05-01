@@ -26,7 +26,9 @@
     "tsc": "tsc -d",
     "updateSnapshot": "jest --updateSnapshot",
     "watch": "npm run build-prod -- --watch",
-    "watch-demo": "npm run build-demo -- --watch"
+    "watch-demo": "npm run build-demo -- --watch",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "FD",
@@ -66,7 +68,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.0",
-    "uniqid": "^5.2.0"
+    "uniqid": "^5.2.0",
+    "snyk": "^1.316.1"
   },
   "jest": {
     "transform": {
@@ -89,5 +92,6 @@
       "text",
       "text-summary"
     ]
-  }
+  },
+  "snyk": true
 }
