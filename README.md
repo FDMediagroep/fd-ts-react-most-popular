@@ -1,20 +1,26 @@
+> :exclamation: **DEPRECATED** :exclamation: : Superseded by @fdmg/design-system. See: https://github.com/FDMediagroep/fd-design-system
+
 [![Build Status](https://travis-ci.org/FDMediagroep/fd-ts-react-most-popular.svg?branch=master)](https://travis-ci.org/FDMediagroep/fd-ts-react-most-popular)
 [![Coverage Status](https://coveralls.io/repos/github/FDMediagroep/fd-ts-react-most-popular/badge.svg?branch=master)](https://coveralls.io/github/FDMediagroep/fd-ts-react-most-popular?branch=master)
 [![npm version](https://badge.fury.io/js/%40fdmg%2Ffd-most-popular.svg)](https://badge.fury.io/js/%40fdmg%2Ffd-most-popular)
 
-
 # fd-most-popular
+
 FD-themed Most Popular Card.
 
 # Installation
-* Run `npm i -D @fdmg/fd-most-popular`
+
+-   Run `npm i -D @fdmg/fd-most-popular`
 
 # Demo
+
 To run the demo, check-out this repository and run `npm run build-demo`.
 After the build succeeded you can open `dist/demo.html` with your webbrowser.
-* [Demo](http://static.fd.nl/react/most-popular/demo.html)
+
+-   [Demo](http://static.fd.nl/react/most-popular/demo.html)
 
 # Usage
+
 ```
 import MostPopular from '@fdmg/fd-most-popular';
 ...
